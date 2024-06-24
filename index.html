@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="skipNav">
-      <a href="#topAsideButton">상단영역 바로가기</a>
+      <a href="#header">상단영역 바로가기</a>
       <a href="#shortcutArea">서비스 메뉴 바로가기</a>
       <a href="#newsStand">새소식 블록 바로가기</a>
       <a href="#shopping">쇼핑 블록 바로가기</a>
@@ -27,7 +27,7 @@
               <a href="/">
                 <svg
                   viewBox="0 0 24 24"
-                  fill="#03c75a"
+                  fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -40,7 +40,11 @@
             <form action="" method="get" class="search-form">
               <fieldset>
                 <legend class="blind">검색</legend>
-                <input type="text" class="input-text" />
+                <input
+                  type="text"
+                  class="input-text"
+                  placeholder="검색어를 입력해 주세요."
+                />
                 <button class="btn-keyboard">
                   <div class="blind">가상키보드</div>
                 </button>
@@ -123,9 +127,10 @@
                   ><span class="name blind">서비스 메뉴 더보기</span></a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item ad">
                 <a href=""
-                  ><i class="ic-hyundai"></i><span class="name">현대해상</span
+                  ><i class="ic-hyundai"></i
+                  ><span class="name">현대해상자동차</span
                   ><i class="ic-ad"><span class="blind">광고</span></i></a
                 >
               </li>
@@ -142,7 +147,7 @@
             <span class="blind">확장메뉴</span>
           </button>
           <a href="" class="btn-pay">
-            <span class="blind">네이버 페이</span>
+            <span class="blind">네이버페이</span>
           </a>
         </div>
         <div class="util-area right">
@@ -156,6 +161,14 @@
             <span class="blind">장바구니</span>
           </a>
         </div>
+        <aside class="ad-area">
+          <a href="">
+            <img
+              src="./assets/images/ad_01.png"
+              alt="[광고] 네이버 숏폼 클립, 크리에이터 모집 중"
+            />
+          </a>
+        </aside>
       </header>
       <main id="container">본문</main>
       <footer id="footer">푸터</footer>

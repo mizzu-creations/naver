@@ -2,3 +2,252 @@
 @import url(./common.css);
 /* 헤더 + 푸터 */
 /* 큰 틀 */
+#wrapper {
+  min-width: 1340px;
+}
+
+/* 헤더 영역 */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  width: 1280px;
+  height: 215px;
+  margin: 0 auto;
+}
+
+/* 헤더 > 중앙 검색 영역 */
+#header .header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#header .header-inner .search-area {
+  display: flex;
+  width: 706px;
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  background-color: #fff;
+}
+#header .search-area .logo a {
+  display: block;
+  padding: 17px 16px 17px 27px;
+}
+#header .search-area .logo a svg {
+  width: 24px;
+  fill: #03c75a;
+}
+#header .search-form {
+  flex: 1;
+}
+#header .search-form fieldset {
+  height: 100%;
+  display: flex;
+}
+#header .search-form .input-text {
+  flex: 1;
+  padding: 17px 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color_search);
+  font-size: 2rem;
+  line-height: 24px;
+  font-weight: bold;
+  outline: 0;
+}
+#header .search-form .input-text::placeholder {
+  color: #e4e4e4;
+  font-weight: normal;
+}
+#header .search-form .btn-keyboard {
+  padding: 22px 3px;
+}
+#header .search-form .btn-keyboard::before {
+  width: 24px;
+  height: 14px;
+  background-position: -290px -270px;
+}
+#header .search-form .btn-auto {
+  padding: 26px 6px;
+}
+#header .search-form .btn-auto::before {
+  width: 10px;
+  height: 6px;
+  background-position: -123px -98px;
+}
+#header .search-form .btn-search {
+  padding: 17px 27px 16px 10px;
+}
+#header .search-form .btn-search svg {
+  width: 25px;
+}
+
+/* 헤더 > 중앙 네비게이션 영역 */
+#header .nav-area .nav-list {
+  display: flex;
+}
+#header .nav-list .nav-item {
+  width: 64px;
+}
+#header .nav-area .nav-list .nav-item.ad {
+  position: relative;
+  width: 83px;
+  margin-left: 2px;
+}
+#header .nav-area .nav-list .nav-item.ad::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  width: 1px;
+  height: 20px;
+  background-color: rgba(227, 229, 232, 0.8);
+}
+#header .nav-list .nav-item + .nav-item {
+  margin-left: -10.5px;
+}
+#header .nav-item a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+#header .nav-item [class*="ic-"]:not(.ic-ad) {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+#header .nav-item [class*="ic-"]:not(.ic-ad)::before {
+  position: absolute;
+  top: -1px;
+  left: -3px;
+  background-position: -193px 0px;
+  width: 50px;
+  height: 50px;
+}
+#header .nav-item [class*="ic-"]:not(.ic-ad)::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+#header .nav-item .ic-mail::after {
+  background-position: -244px -41px;
+}
+#header .nav-item .ic-cafe::after {
+  background-position: -86px -184px;
+}
+#header .nav-item .ic-blog::after {
+  background-position: -45px -184px;
+}
+#header .nav-item .ic-shopping::after {
+  background-position: -164px -229px;
+}
+#header .nav-item .ic-news::after {
+  background-position: -82px -229px;
+}
+#header .nav-item .ic-stock::after {
+  background-position: -205px -229px;
+}
+#header .nav-item .ic-realestate::after {
+  background-position: -123px -229px;
+}
+#header .nav-item .ic-map::after {
+  background-position: -244px -82px;
+}
+#header .nav-item .ic-webtoon::after {
+  background-position: -285px 0px;
+}
+#header .nav-item .ic-chijijik::after {
+  background-image: url("../images/ic_chijijik.png");
+  background-size: 100%;
+}
+#header .nav-item .ic-more::after {
+  background-position: -41px -229px;
+}
+#header .nav-item .ic-hyundai::after {
+  background-image: url("../images/ic_ad.png");
+  background-size: 100%;
+  mask-image: url("../images/mask_img.svg");
+}
+#header .nav-item .ic-ad::after {
+  width: 26px;
+  height: 22px;
+  position: absolute;
+  top: -5px;
+  right: 12px;
+  background-position: -27px -378px;
+}
+#header .nav-item .name {
+  display: block;
+  width: 64px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#header .nav-item.ad .name {
+  width: 83px;
+}
+
+/* 헤더 > 상단 메뉴 영역 */
+#header .util-area {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+}
+#header .util-area.left {
+  margin-left: -12px;
+}
+#header .util-area.right {
+  margin-right: -12px;
+}
+#header .util-area [class*="btn-"] {
+  width: 48px;
+  padding: 8px;
+}
+#header .util-area [class*="btn-"]::after {
+  width: 32px;
+  height: 32px;
+}
+#header .util-area .btn-menu::after {
+  background-position: -326px -161px;
+}
+#header .util-area .btn-pay::after {
+  background-position: -285px -41px;
+}
+#header .util-area .btn-talk::after {
+  background-position: -285px -173px;
+}
+#header .util-area .btn-alert::after {
+  background-position: -326px -227px;
+}
+#header .util-area .btn-cart::after {
+  background-position: -285px -107px;
+}
+
+/* 헤더 > 우측 광고 영역 */
+#header .ad-area {
+  position: absolute;
+  top: 86px;
+  right: -12px;
+}
+#header .ad-area img {
+  width: 244px;
+  height: 108px;
+  aspect-ratio: auto 244 / 108;
+}

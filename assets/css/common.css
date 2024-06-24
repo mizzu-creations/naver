@@ -28,3 +28,16 @@
 #skipNav a:active {
   top: 0;
 }
+
+/* 스프라이트 배경 */
+#header .search-form .btn-keyboard::before,
+#header .search-form .btn-auto::before,
+#header .util-area [class*="btn-"]::after,
+#header .nav-item [class*="ic-"]::before,
+#header .nav-item [class*="ic-"]::after {
+  content: "";
+  display: block;
+  background-image: url("../images/sp_main_01.png");
+  background-size: 442px 434px;
+  background-repeat: no-repeat;
+}
