@@ -8,5 +8,157 @@
     <link rel="stylesheet" href="./assets/css/layout.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="skipNav">
+      <a href="#topAsideButton">상단영역 바로가기</a>
+      <a href="#shortcutArea">서비스 메뉴 바로가기</a>
+      <a href="#newsStand">새소식 블록 바로가기</a>
+      <a href="#shopping">쇼핑 블록 바로가기</a>
+      <a href="#feed">관심사 블록 바로가기</a>
+      <a href="#account">MY 영역 바로가기</a>
+      <a href="#widgetboard">위젯 보드 바로가기</a>
+      <a href="#viewSetting">보기 설정 바로가기</a>
+    </div>
+    <div id="wrapper">
+      <header id="header">
+        <div class="header-inner">
+          <div class="search-area">
+            <h1 class="logo">
+              <a href="/">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="#03c75a"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"
+                  ></path>
+                </svg>
+                <span class="blind">네이버로고</span>
+              </a>
+            </h1>
+            <form action="" method="get" class="search-form">
+              <fieldset>
+                <legend class="blind">검색</legend>
+                <input type="text" class="input-text" />
+                <button class="btn-keyboard">
+                  <div class="blind">가상키보드</div>
+                </button>
+                <button class="btn-auto">
+                  <div class="blind">자동완성기능켜기</div>
+                </button>
+                <button class="btn-search">
+                  <svg
+                    id="search-btn"
+                    viewBox="0 0 50 50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="fill: #03c75a"
+                  >
+                    <path
+                      d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"
+                    ></path>
+                  </svg>
+                  <div class="blind">검색</div>
+                </button>
+              </fieldset>
+            </form>
+          </div>
+          <nav class="nav-area">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-mail"></i><span class="name">메일</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-cafe"></i><span class="name">카페</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-blog"></i><span class="name">블로그</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-shopping"></i><span class="name">쇼핑</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-news"></i><span class="name">뉴스</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-stock"></i><span class="name">증권</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-realestate"></i
+                  ><span class="name">부동산</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-map"></i><span class="name">지도</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-webtoon"></i><span class="name">웹툰</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-chijijik"></i
+                  ><span class="name">치지직</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-more"></i
+                  ><span class="name blind">서비스 메뉴 더보기</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="ic-hyundai"></i><span class="name">현대해상</span
+                  ><i class="ic-ad"><span class="blind">광고</span></i></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="util-area left">
+          <button
+            class="btn-menu"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-pressed="true"
+          >
+            <span class="blind">확장메뉴</span>
+          </button>
+          <a href="" class="btn-pay">
+            <span class="blind">네이버 페이</span>
+          </a>
+        </div>
+        <div class="util-area right">
+          <button class="btn-talk">
+            <span class="blind">네이버톡</span>
+          </button>
+          <a href="" class="btn-alert">
+            <span class="blind">알람혜택</span>
+          </a>
+          <a href="" class="btn-cart">
+            <span class="blind">장바구니</span>
+          </a>
+        </div>
+      </header>
+      <main id="container">본문</main>
+      <footer id="footer">푸터</footer>
+    </div>
+  </body>
 </html>

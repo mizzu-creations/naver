@@ -1,4 +1,6 @@
 /* 공통의 코드 */
+
+/* IR 기법 */
 .blind {
   position: absolute;
   width: 1px;
@@ -6,4 +8,23 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   margin: -1px;
+}
+
+/* 스킵 네비게이션 영역 */
+#skipNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#skipNav a {
+  position: absolute;
+  white-space: nowrap;
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+  top: -100px;
+}
+#skipNav a:focus,
+#skipNav a:active {
+  top: 0;
 }
