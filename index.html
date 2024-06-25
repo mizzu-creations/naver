@@ -10,11 +10,11 @@
   </head>
   <body>
     <div id="skipNav">
-      <a href="#header">상단영역 바로가기</a>
+      <a href="#topMenuBtn">상단영역 바로가기</a>
       <a href="#shortcutArea">서비스 메뉴 바로가기</a>
       <a href="#newsStand">새소식 블록 바로가기</a>
       <a href="#shopping">쇼핑 블록 바로가기</a>
-      <a href="#feed">관심사 블록 바로가기</a>
+      <a href="#recipe">레시피 블록 바로가기</a>
       <a href="#account">MY 영역 바로가기</a>
       <a href="#widgetboard">위젯 보드 바로가기</a>
       <a href="#viewSetting">보기 설정 바로가기</a>
@@ -68,7 +68,7 @@
             </form>
           </div>
           <nav class="nav-area">
-            <ul class="nav-list">
+            <ul id="shortcutArea" class="nav-list">
               <li class="nav-item">
                 <a href=""
                   ><i class="ic-mail"></i><span class="name">메일</span></a
@@ -139,6 +139,7 @@
         </div>
         <div class="util-area left">
           <button
+            id="topMenuBtn"
             class="btn-menu"
             aria-haspopup="menu"
             aria-expanded="false"
@@ -161,7 +162,7 @@
             <span class="blind">장바구니</span>
           </a>
         </div>
-        <aside class="ad-area">
+        <aside class="ad-banner">
           <a href="">
             <img
               src="./assets/images/ad_01.png"
@@ -170,7 +171,314 @@
           </a>
         </aside>
       </header>
-      <main id="container">본문</main>
+      <main id="container">
+        <div id="main">
+          <div class="col-left">
+            <aside class="ad-banner common-frame">
+              <a href=""
+                ><img
+                  src="./assets/images/ad_02.jpg"
+                  alt="[광고] 영어가 취미가 될 줄이야! 회사에서 몰래 1장해요! 뇌새김"
+              /></a>
+            </aside>
+            <section id="newsStand" class="sc-news common-frame">
+              <h2 class="blind">뉴스</h2>
+              <div class="group-header">
+                <ul class="tab-list" role="tablist">
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="true">뉴스스탠드</a>
+                  </li>
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="false">언론사편집</a>
+                  </li>
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="false">엔터</a>
+                  </li>
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="false"
+                      >스포츠<i class="ic-live">LIVE</i></a
+                    >
+                  </li>
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="false">경제</a>
+                  </li>
+                  <li class="tab-item" role="presentation">
+                    <a href="" role="tab" aria-selected="false">쇼핑투데이</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="group-issue">
+                <div class="issue-area">
+                  <a href="" role="button" class="btn-all">전체언론사</a>
+                  <a href="" class="link-media">연합뉴스</a>
+                  <a href="" class="link-issue"
+                    >러 "북러 조약, 더 긴밀한 협력 시사…군사협력 배제 안 해
+                    관련한 대책 마련 必"</a
+                  >
+                </div>
+                <div class="news-area">
+                  <a href="" class="link-news">뉴스스탠드</a>
+                  <a href="" class="link-news">뉴스홈</a>
+                </div>
+              </div>
+              <div class="group-media">
+                <ul class="media-list">
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_aju.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_dailyan.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_donga.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_financial.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_herald.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_huffpost.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_jtbc.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_kbs.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_kbs_world.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_kookmin.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_mbc.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_mbn.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_metro.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_money.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_newsis.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_obs.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_osen.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_seoul.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_sports_chosun.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_sports_donga.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_top_daily.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_wikitree.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_yeonhab.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                  <li class="media-item">
+                    <a href=""
+                      ><img
+                        src="./assets/images/ns_lg_ytn.png"
+                        alt=""
+                        height="20"
+                    /></a>
+                  </li>
+                </ul>
+                <i class="vt1"></i><i class="vt2"></i><i class="vt3"></i
+                ><i class="vt4"></i><i class="vt5"></i> <i class="hr1"></i
+                ><i class="hr2"></i><i class="hr3"></i>
+              </div>
+              <div class="group-control">
+                <div class="control-area">
+                  <button class="btn-prev">
+                    <span class="blind">이전 페이지</span>
+                  </button>
+                  <div class="page">
+                    <span class="more"><span>언론사</span>더보기</span>
+                    <span class="current"
+                      ><span class="blind">페이지</span>1</span
+                    >
+                    <span class="total"><span class="blind">전체</span>/4</span>
+                  </div>
+                  <button class="btn-next">
+                    <span class="blind">다음 페이지</span>
+                  </button>
+                </div>
+                <div class="view-area" role="radiogroup">
+                  <button class="btn-list" role="radio" aria-checked="true">
+                    <span class="blind">리스트형</span>
+                  </button>
+                  <button class="btn-thumb" role="radio" aria-checked="false">
+                    <span class="blind">썸네일형</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section id="shopping" class="sc-shopping common-frame">
+              쇼핑
+              <h2 class="blind">쇼핑</h2>
+            </section>
+            <section id="recipe" class="sc-recipe common-frame">
+              레시피
+              <h2 class="blind">레시피</h2>
+            </section>
+          </div>
+          <div class="col-right">
+            <section id="account" class="sc-login common-frame">
+              로그인
+              <h2 class="blind">로그인</h2>
+            </section>
+            <aside class="ad-banner common-frame">광고</aside>
+            <section class="sc-weather common-frame">
+              날씨
+              <h2 class="blind">날씨</h2>
+            </section>
+            <section class="sc-stock common-frame">
+              증시
+              <h2 class="blind">증시</h2>
+            </section>
+            <aside class="ad-banner common-frame">광고</aside>
+            <section id="widgetboard" class="sc-widjet common-frame">
+              위젯
+              <h2 class="blind">위젯</h2>
+            </section>
+            <aside class="ad-banner common-frame">광고</aside>
+          </div>
+        </div>
+      </main>
+      <aside id="viewSetting">보기 설정</aside>
       <footer id="footer">푸터</footer>
     </div>
   </body>

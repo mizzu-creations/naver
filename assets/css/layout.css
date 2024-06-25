@@ -241,12 +241,12 @@
 }
 
 /* 헤더 > 우측 광고 영역 */
-#header .ad-area {
+#header .ad-banner {
   position: absolute;
   top: 86px;
   right: -12px;
 }
-#header .ad-area img {
+#header .ad-banner img {
   width: 244px;
   height: 108px;
   aspect-ratio: auto 244 / 108;

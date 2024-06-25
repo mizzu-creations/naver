@@ -34,10 +34,26 @@
 #header .search-form .btn-auto::before,
 #header .util-area [class*="btn-"]::after,
 #header .nav-item [class*="ic-"]::before,
-#header .nav-item [class*="ic-"]::after {
+#header .nav-item [class*="ic-"]::after,
+#main .sc-news .ic-live::before,
+#main .sc-news .group-issue .btn-all::after,
+.sc-news .control-area [class*="btn-"]::before,
+.sc-news .view-area [class*="btn-"]::before {
   content: "";
   display: block;
   background-image: url("../images/sp_main_01.png");
   background-size: 442px 434px;
   background-repeat: no-repeat;
+}
+
+/* 공통 프레임 */
+.common-frame {
+  background-color: #fff;
+  background-color: var(--color_block_bg);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+.common-frame + .common-frame {
+  margin-top: 16px;
 }
