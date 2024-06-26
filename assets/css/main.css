@@ -14,29 +14,32 @@ body {
 #main > .col-left {
   width: 830px;
 }
-#main > .col-left .ad-banner {
+#main > .col-left > .ad-banner {
   overflow: hidden;
 }
-#main > .col-left .ad-banner img {
+#main > .col-left > .ad-banner img {
   width: 830px;
   height: 130px;
 }
 
-/* 메인 > 뉴스스탠드 영역 */
-#main > .col-left .sc-news .group-header {
-  padding: 18px 20px 17px;
-}
-.sc-news .group-header .tab-list {
+/* 메인 > 뉴스스탠드 탭 메뉴 영역 */
+.sc-news .tab-item:nth-child(2) a {
   display: flex;
+  align-items: center;
 }
-.sc-news .tab-list .tab-item [aria-selected="true"] {
-  color: var(--color_title);
+.sc-news .tab-item:nth-child(2) a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--color_dot_divider);
+  border-radius: 50%;
+  margin: 0 8px;
 }
-.sc-news .tab-list .tab-item:nth-child(n + 3) {
+.sc-news .tab-item:nth-child(n + 3) {
   position: relative;
   padding-left: 26px;
 }
-.sc-news .tab-list .tab-item:nth-child(n + 3):before {
+.sc-news .tab-item:nth-child(n + 3):before {
   content: "";
   position: absolute;
   top: 4px;
@@ -46,25 +49,6 @@ body {
   background-color: var(--color_dot_divider);
   -ms-transform: skewX(-15deg);
   transform: skewX(-15deg);
-}
-.sc-news .tab-list .tab-item a {
-  font-size: 1.6rem;
-  line-height: 23px;
-  font-weight: 800;
-  color: rgba(8, 8, 8, 0.5);
-  -webkit-font-smoothing: antialiased;
-}
-.sc-news .tab-list .tab-item:nth-child(2) a {
-  display: flex;
-  align-items: center;
-}
-.sc-news .tab-list .tab-item:nth-child(2) a::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  background-color: var(--color_dot_divider);
-  border-radius: 50%;
-  margin: 0 8px;
 }
 .sc-news .tab-list .tab-item:nth-child(4) a {
   display: flex;
@@ -89,6 +73,8 @@ body {
   height: 10px;
   margin-top: 1px;
 }
+
+/* 메인 > 뉴스스탠드 이슈 영역 */
 .sc-news .group-issue {
   display: flex;
   justify-content: space-between;
@@ -155,6 +141,8 @@ body {
   margin-right: 12px;
   background-color: var(--color_dot_divider);
 }
+
+/* 메인 > 뉴스스탠드 미디어 영역 */
 .sc-news .group-media {
   margin: 18px 20px 18px 20px;
   position: relative;
@@ -213,68 +201,11 @@ body {
 .sc-news .group-media .hr3 {
   top: calc(100% / 4 * 3);
 }
-.sc-news .group-control {
-  display: flex;
-  justify-content: flex-end;
-  border-top: 1px solid var(--color_border_in);
-  position: relative;
-  padding: 10px 20px 11px;
-  line-height: 34px;
-  text-align: center;
-}
-.sc-news .group-control .control-area {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.sc-news .control-area [class*="btn-"] {
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--color_button_border);
-  background-color: var(--color_button1_bg);
-  position: relative;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 50%;
-}
-.sc-news .control-area [class*="btn-"]::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: -299px -422px;
-  width: 10px;
-  height: 12px;
-  margin: auto;
-}
-.sc-news .control-area .btn-prev::before {
-  transform: rotate(180deg);
-}
-.sc-news .control-area .page {
-  display: flex;
-  flex-direction: row;
-  min-width: 156px;
-  padding: 0 16px;
-  color: var(--color_caption2);
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 35px;
-}
-.sc-news .control-area .page .more {
-  padding-right: 4px;
-}
-.sc-news .control-area .page .more span {
-  padding-right: 4px;
-  color: var(--color_news);
-}
-.sc-news .control-area .page .total {
-  color: rgba(96, 96, 96, 0.5);
-}
+
+/* 메인 > 뉴스스탠드 더보기 영역 */
 .sc-news .group-control .view-area {
   display: flex;
   gap: 20px;
-  height: 36px;
 }
 .sc-news .view-area .btn-list::before {
   width: 20px;
@@ -288,7 +219,274 @@ body {
 }
 
 /* 쇼핑 영역 */
+.sc-shopping .group-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 쇼핑 > 좌측 상단 페이지네이션 영역 */
+.sc-shopping .pagination-area {
+  display: flex;
+}
+.sc-shopping .pagination-area .page {
+  display: flex;
+  align-items: center;
+  margin-right: 9px;
+  color: var(--color_caption2);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 16px;
+}
+.sc-shopping .page .total {
+  color: rgba(113, 113, 113, 0.6);
+}
+.sc-shopping .pagination-area [class*="btn-"] {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 1px solid rgba(211, 213, 215, 0.8);
+  border-radius: 4px 0 0 4px;
+}
+.sc-shopping .pagination-area [class*="ic-"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sc-shopping .btn-prev .ic-prev::before {
+  margin-left: 2px;
+  border-left: 2px solid #80868c;
+  border-bottom: 2px solid #80868c;
+  margin-left: 1px;
+}
+.sc-shopping .pagination-area .btn-next {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+.sc-shopping .btn-next .ic-next::before {
+  margin-left: -2px;
+  border-top: 2px solid #80868c;
+  border-right: 2px solid #80868c;
+  margin-left: -1px;
+}
+
+/* 쇼핑 > 커머스 리스트 영역 */
+.sc-shopping .group-commerce {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px 1px;
+}
+.sc-shopping .group-commerce .mall-area {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px 11px;
+}
+.sc-shopping .group-commerce .mall-list {
+  display: flex;
+  justify-content: space-between;
+}
+.sc-shopping .mall-list {
+  display: flex;
+  align-items: center;
+}
+.sc-shopping .mall-list .dot {
+  width: 3px;
+  height: 3px;
+  background-color: var(--color_dot_divider);
+  border-radius: 50%;
+}
+.sc-shopping .mall-item a {
+  color: var(--color_caption1);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.6px;
+}
+.sc-shopping .mall-item a strong {
+  color: var(--color_body);
+  font-weight: bold;
+}
+
+/* 쇼핑 > 퀵 메뉴 영역 */
+.sc-shopping .group-commerce .quick-menu-area {
+  margin-top: 12px;
+  padding: 9px;
+}
+.group-commerce .quick-menu-area .menu-list {
+  display: flex;
+}
+.group-commerce .quick-menu-area .menu-item {
+  flex: 1;
+}
+.quick-menu-area .menu-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.quick-menu-area .menu-item a [class*="ic-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(238, 242, 248, 0.8);
+}
+.quick-menu-area .menu-item a [class*="ic-"]::before {
+  width: 32px;
+  height: 32px;
+}
+.quick-menu-area .menu-item a .ic-home::before {
+  background-position: -34px 0;
+}
+.quick-menu-area .menu-item a .ic-review::before {
+  background-position: -68px -34px;
+}
+.quick-menu-area .menu-item a .ic-order::before {
+  background-position: -34px -34px;
+}
+.quick-menu-area .menu-item a .ic-cart::before {
+  width: 17px;
+  height: 16px;
+  background-position: -19px -121px;
+}
+.quick-menu-area .menu-item a span {
+  color: var(--color_caption1);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* 쇼핑 > 광고 배너 영역 */
+.sc-shopping .group-commerce .ad-banner {
+  margin-top: 12px;
+}
+.sc-shopping .group-commerce .ad-banner a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sc-shopping .group-commerce .ad-banner a img {
+  width: 248px;
+  height: 146px;
+  aspect-ratio: auto 248 / 146;
+}
+.sc-shopping .ad-banner a span {
+  font-size: 1.3rem;
+  line-height: 19px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 쇼핑 > 제품 리스트 영역 */
+.sc-shopping .group-commerce > .col-right {
+  width: 522px;
+}
+.sc-shopping .col-right .product-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 14px 8px;
+  height: 100%;
+}
+.sc-shopping .col-right .product-item {
+  min-width: 0;
+}
+.sc-shopping .col-right .product-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.sc-shopping .product-item img {
+  width: 98px;
+  height: 126px;
+}
+.sc-shopping .product-item .product-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  line-height: 19px;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 쇼핑 > 오늘의 혜택 영역 */
+.sc-shopping .group-benefits {
+  margin: 18px 20px;
+}
+.sc-shopping .group-benefits .benefit-area {
+  display: flex;
+  gap: 9px;
+  padding: 15px 20px 14px;
+  border-radius: 4px;
+  background-color: var(--color_option_bg);
+  line-height: 21px;
+}
+.sc-shopping .group-benefits .benefit-area > span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+}
+.sc-shopping .benefit-area > span::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: var(--color_dot_divider);
+  border-radius: 50%;
+}
+.sc-shopping .group-benefits .benefit-area a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.sc-shopping .benefit-area a img {
+  height: 13px;
+}
+.sc-shopping .benefit-area a > span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sc-shopping .benefit-area a > span em {
+  color: #9858f5;
+}
+
+/* 쇼핑 > 하단 컨트롤 영역 */
+.sc-shopping .control-area .page .more span {
+  color: #9858f5;
+}
+.sc-shopping .group-control .ad-mark {
+  width: 30px;
+  border: 1px solid var(--color_border_out);
+  color: var(--color_caption2);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  line-height: 18px;
+  text-align: center;
+}
+
 /* 레시피 영역 */
+.sc-recipe .group-control .control-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.sc-recipe .control-area span {
+  color: #ebaa00;
+}
 
 #main > .col-right {
   width: 420px;

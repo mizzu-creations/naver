@@ -37,16 +37,23 @@
 #header .nav-item [class*="ic-"]::after,
 #main .sc-news .ic-live::before,
 #main .sc-news .group-issue .btn-all::after,
-.sc-news .control-area [class*="btn-"]::before,
-.sc-news .view-area [class*="btn-"]::before {
+#main .control-area [class*="btn-"]::before,
+#main .view-area [class*="btn-"]::before {
   content: "";
   display: block;
   background-image: url("../images/sp_main_01.png");
   background-size: 442px 434px;
   background-repeat: no-repeat;
 }
+.quick-menu-area .menu-item a [class*="ic-"]::before {
+  content: "";
+  display: block;
+  background-image: url(../images/sp_main_02.png);
+  background-repeat: no-repeat;
+  background-size: 158px 137px;
+}
 
-/* 공통 프레임 */
+/* 공통 프레임 1 */
 .common-frame {
   background-color: #fff;
   background-color: var(--color_block_bg);
@@ -56,4 +63,113 @@
 }
 .common-frame + .common-frame {
   margin-top: 16px;
+}
+
+/* 공통 프레임 2 */
+.common-frame-inner {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background: rgba(245, 248, 251, 0.6);
+}
+
+/* 공통 탭 메뉴 */
+.group-header.tab-menu {
+  padding: 18px 20px 17px;
+}
+.group-header.tab-menu .tab-list {
+  display: flex;
+}
+.group-header.tab-menu .tab-item [aria-selected="true"] {
+  color: var(--color_title);
+}
+.sc-shopping .tab-item:nth-child(n + 2),
+.sc-recipe .tab-item:nth-child(n + 2) {
+  position: relative;
+  padding-left: 26px;
+}
+.sc-shopping .tab-item:nth-child(n + 2):before,
+.sc-recipe .tab-item:nth-child(n + 2):before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 13px;
+  width: 1px;
+  height: 15px;
+  background-color: var(--color_dot_divider);
+  -ms-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+.group-header.tab-menu .tab-item a {
+  font-size: 1.6rem;
+  line-height: 23px;
+  font-weight: 800;
+  color: rgba(8, 8, 8, 0.5);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 공통 컨트롤 영역 */
+.group-control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 56px;
+  border-top: 1px solid var(--color_border_in);
+  position: relative;
+  padding: 10px 20px 11px;
+}
+.group-control .control-area {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.control-area [class*="btn-"] {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color_button_border);
+  background-color: var(--color_button1_bg);
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+}
+.control-area [class*="btn-"]::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: -299px -422px;
+  width: 10px;
+  height: 12px;
+  margin: auto;
+}
+.control-area .btn-prev::before {
+  transform: rotate(180deg);
+}
+.control-area .page {
+  display: flex;
+  flex-direction: row;
+  min-width: 156px;
+  padding: 0 16px;
+  color: var(--color_caption2);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 35px;
+}
+.control-area .page .more {
+  padding-right: 5px;
+}
+.control-area .page .more span {
+  padding-right: 5px;
+  color: var(--color_news);
+}
+.control-area .page .total {
+  color: rgba(96, 96, 96, 0.5);
+}
+
+/* 링크 마우스 hover underline */
+#main a:hover,
+#footer a:hover {
+  text-decoration: underline;
 }
