@@ -39,7 +39,8 @@
 #main .sc-news .group-issue .btn-all::after,
 #main [class*="btn-"].round::before,
 #main .view-area [class*="btn-"]::before,
-#main .sc-login .link-login::before {
+#main .sc-login .link-login::before,
+.floating-group a::before {
   content: "";
   display: block;
   background-image: url("../images/sp_main_01.png");
@@ -193,6 +194,8 @@ html[data-dark="true"] .group-header .tab-item a {
 #main .sc-shopping a:hover,
 .group-header.tab-menu .tab-item a:hover,
 .sc-recipe [class*="-item"] a:hover .post-title,
+.ad-slide a:hover strong,
+.ad-slide a:hover p,
 #footer a:hover {
   text-decoration: underline;
 }

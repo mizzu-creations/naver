@@ -510,6 +510,14 @@ body {
   background-repeat: no-repeat;
   background-size: 20px 20px;
 }
+.sc-recipe .user-info [class*="ic-user"]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
 .sc-recipe .user-info .name {
   color: var(--color_caption2);
   font-size: 1.3rem;
@@ -803,4 +811,51 @@ body {
 /* 메인 우측 광고 배너 영역 */
 #main > .col-right > .ad-banner a {
   position: relative;
+}
+
+/* 메인 우측 하단 광고 슬라이드 영역 */
+#main > .col-right > .ad-slide a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 18px;
+}
+.ad-slide .contents-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+.ad-slide .contents-area img {
+  width: 42px;
+  height: 42px;
+}
+.ad-slide .contents-area strong {
+  color: var(--color_body);
+  line-height: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ad-slide .contents-area p {
+  margin-top: 2px;
+  line-height: 20px;
+  color: var(--color_caption2);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ad-slide .pagination-area {
+  display: flex;
+  gap: 4px;
+}
+.ad-slide .pagination-area .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(128, 134, 140, 0.3);
+}
+.ad-slide .pagination-area .dot.active {
+  background-color: #03c75a;
 }

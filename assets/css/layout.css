@@ -251,3 +251,44 @@
   height: 108px;
   aspect-ratio: auto 244 / 108;
 }
+
+/* 좌측 하단 플로팅 버튼 그룹 */
+.floating-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10;
+}
+.floating-group a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color_button1_bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.floating-group a::before {
+  width: 16px;
+  height: 16px;
+}
+.floating-group .btn-top::before {
+  background-position: -274px -307px;
+}
+.floating-group .btn-setting::before {
+  background-position: -189px -307px;
+}
+.floating-group a:active {
+  background-color: #17b75e;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.floating-group .btn-top:active::before {
+  background-position: -206px -307px;
+}
+.floating-group .btn-setting:active::before {
+  background-position: -121px -307px;
+}
