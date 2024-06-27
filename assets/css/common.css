@@ -188,6 +188,13 @@ html[data-dark="true"] .group-header .tab-item a {
 .btn-prev.round::before {
   transform: rotate(180deg);
 }
+[class*="btn-"].round:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fbfbfc;
+}
+[class*="btn-"].round:hover::before {
+  background-position: -288px -422px;
+}
 
 /* 링크 마우스 hover underline */
 #main .sc-news a:hover,
@@ -196,6 +203,7 @@ html[data-dark="true"] .group-header .tab-item a {
 .sc-recipe [class*="-item"] a:hover .post-title,
 .ad-slide a:hover strong,
 .ad-slide a:hover p,
+.sc-login .more-area a:hover,
 #footer a:hover {
   text-decoration: underline;
 }

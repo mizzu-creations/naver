@@ -201,6 +201,40 @@ body {
 .sc-news .group-media .hr3 {
   top: calc(100% / 4 * 3);
 }
+.sc-news .group-media .media-item {
+  position: relative;
+}
+.sc-news .group-media .media-item:hover .news-info {
+  display: flex;
+}
+.sc-news .group-media .media-item .news-info {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2868f2;
+}
+.sc-news .media-item .news-info a {
+  height: fit-content;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+}
+.sc-news .media-item .news-info a:last-child::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.sc-news .media-item .news-info a:hover {
+  font-weight: bold;
+}
 
 /* 메인 > 뉴스스탠드 더보기 영역 */
 .sc-news .group-control .view-area {
@@ -212,10 +246,16 @@ body {
   height: 20px;
   background-position: -397px -354px;
 }
+.sc-news .view-area .btn-list:hover::before {
+  background-position: -397px -333px;
+}
 .sc-news .view-area .btn-thumb::before {
   width: 20px;
   height: 20px;
   background-position: -422px -231px;
+}
+.sc-news .view-area .btn-thumb:hover::before {
+  background-position: -422px -210px;
 }
 
 /* 쇼핑 영역 */
@@ -271,6 +311,12 @@ body {
   border-top: 2px solid #80868c;
   border-right: 2px solid #80868c;
   margin-left: -1px;
+}
+.sc-shopping .pagination-area [class*="btn-"]:hover {
+  background-color: #fbfbfc;
+}
+.sc-shopping .pagination-area [class*="btn-"]:hover [class*="ic-"]::before {
+  border-color: #2a2c2f;
 }
 
 /* 쇼핑 > 커머스 리스트 영역 */
@@ -783,6 +829,10 @@ body {
   background-color: #03c75a;
   box-shadow: 0 2px 4px 0 rgba(3, 199, 90, 0.12);
   color: #fff;
+}
+.sc-login .link-login:hover {
+  background-color: #17b75e;
+  box-shadow: 0 2px 4px 0 rgba(3, 199, 90, 0.24);
 }
 .sc-login .link-login::before {
   width: 72px;
