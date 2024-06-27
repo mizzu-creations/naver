@@ -40,7 +40,8 @@
 #main [class*="btn-"].round::before,
 #main .view-area [class*="btn-"]::before,
 #main .sc-login .link-login::before,
-.floating-group a::before {
+.floating-group a::before,
+#footer .sc-notice > a::after {
   content: "";
   display: block;
   background-image: url("../images/sp_main_01.png");
@@ -77,7 +78,7 @@
 
 /* 공통 프레임 2 */
 .common-frame-inner {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 4px;
   background: rgba(245, 248, 251, 0.6);
   overflow: hidden;
@@ -204,12 +205,15 @@ html[data-dark="true"] .group-header .tab-item a {
 .ad-slide a:hover strong,
 .ad-slide a:hover p,
 .sc-login .more-area a:hover,
-#footer a:hover {
+#footer .banner-item a:hover .title,
+#footer .sc-notice a:hover,
+#footer .partner-wrap ul li a:hover,
+#footer .corp-item a:hover {
   text-decoration: underline;
 }
 
 /* 광고 마크 */
-.ad-mark {
+button.ad-mark {
   width: 42px;
   height: 16px;
   margin: 2px 4px;

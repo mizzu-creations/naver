@@ -187,7 +187,7 @@
   background-position: -41px -229px;
 }
 #header .nav-item .ic-hyundai::after {
-  background-image: url("../images/ic_ad.png");
+  background-image: url("../images/ic_ad_hyundai.png");
   background-size: 100%;
   mask-image: url("../images/mask_img.svg");
 }
@@ -306,6 +306,16 @@
 .floating-group .btn-setting::before {
   background-position: -189px -307px;
 }
+.floating-group a:hover {
+  background-color: #f7f7f8;
+  box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.floating-group .btn-top:hover::before {
+  background-position: -257px -307px;
+}
+.floating-group .btn-setting:hover::before {
+  background-position: -172px -307px;
+}
 .floating-group a:active {
   background-color: #17b75e;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -315,4 +325,202 @@
 }
 .floating-group .btn-setting:active::before {
   background-position: -121px -307px;
+}
+
+/* 푸터 영역 */
+#footer {
+  border-top: 1px solid var(--color_border_in_divider);
+  background-color: #f5f6f7;
+}
+#footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 78px;
+  font-size: 1.3rem;
+}
+#footer .footer-inner > section:not(.sc-corp) {
+  border-bottom: 1px solid var(--color_border_in_divider);
+}
+/* 푸터 > 배너 리스트 영역 */
+#footer .footer-inner .sc-banner {
+  padding: 30px 0;
+}
+.footer-inner .sc-banner .banner-list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-inner .sc-banner .banner-item a {
+  display: flex;
+  gap: 18px;
+  width: 410px;
+}
+.footer-inner .sc-banner .common-frame-inner {
+  position: relative;
+  border-radius: 6px;
+}
+.footer-inner .sc-banner .ic-ad {
+  width: 25px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-image: url(../images/ic_ad.svg);
+}
+.footer-inner .sc-banner .banner-item .content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-inner .content-wrap strong {
+  font-weight: bold;
+}
+.footer-inner .content-wrap .subtitle {
+  width: fit-content;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  background-color: #a0adb2;
+  color: #fff;
+}
+.footer-inner .content-wrap .title {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: -0.25px;
+  color: #222122;
+}
+.footer-inner .content-wrap .desc {
+  margin-top: 6px;
+}
+.footer-inner .content-wrap p {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #545454;
+  letter-spacing: -0.25px;
+}
+
+/* 푸터 > 공지사항 영역 */
+#footer .footer-inner .sc-notice {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0;
+}
+.footer-inner .sc-notice .notice-wrap {
+  display: flex;
+  gap: 11px;
+}
+.footer-inner .sc-notice .notice-wrap .title {
+  font-weight: bold;
+}
+.footer-inner .sc-notice .notice-wrap > a {
+  max-width: 600px;
+  color: var(--color_caption1);
+}
+.footer-inner .sc-notice > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+.footer-inner .sc-notice > a::after {
+  background-position: -343px -422px;
+  width: 8px;
+  height: 12px;
+}
+
+/* 푸터 > 링크 영역 */
+#footer .footer-inner .sc-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+#footer .footer-inner .sc-links .partner-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sc-links .partner-wrap div {
+  display: flex;
+  gap: 9px;
+}
+.sc-links .partner-wrap h3 {
+  width: 87px;
+  font-weight: bold;
+}
+.sc-links .partner-wrap ul {
+  display: flex;
+  gap: 10px;
+}
+.sc-links .partner-wrap ul li {
+  display: flex;
+  align-items: center;
+}
+.sc-links .partner-wrap ul li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: var(--color_dot_divider);
+  margin-right: 10px;
+}
+.sc-links .partner-item:first-child::before,
+.sc-links .developer-item:first-child::before {
+  width: 0;
+  margin-right: 0;
+}
+.sc-links .partner-wrap ul li a {
+  color: var(--color_caption1);
+}
+#footer .footer-inner .sc-links .service-wrap {
+  display: flex;
+  gap: 30px;
+}
+.sc-links .service-wrap .service-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.sc-links .service-wrap .service-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sc-links .service-wrap .service-info strong {
+  font-weight: bold;
+}
+.sc-links .service-wrap .service-info span {
+  color: var(--color_caption1);
+}
+.sc-links .service-wrap .service-link:hover span {
+  text-decoration: underline;
+}
+/* 푸터 > 코퍼레이션 영역 */
+#footer .footer-inner .sc-corp {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.footer-inner .sc-corp .corp-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-inner .sc-corp .corp-item {
+  display: flex;
+  align-items: center;
+  color: var(--color_caption1);
+  line-height: 20px;
+}
+.footer-inner .sc-corp .corp-item + .corp-item::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: var(--color_dot_divider);
+  margin-right: 10px;
+}
+.footer-inner .sc-corp .corp-item strong {
+  font-weight: bold;
 }
