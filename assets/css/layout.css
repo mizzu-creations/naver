@@ -35,6 +35,9 @@
   border-radius: 33px;
   background-color: #fff;
 }
+#header .header-inner .search-area:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
 #header .search-area .logo a {
   display: block;
   padding: 17px 16px 17px 27px;
@@ -73,6 +76,9 @@
   height: 14px;
   background-position: -290px -270px;
 }
+#header .search-form .btn-keyboard:hover::before {
+  background-position: -265px -270px;
+}
 #header .search-form .btn-auto {
   padding: 26px 6px;
 }
@@ -94,6 +100,9 @@
 }
 #header .nav-list .nav-item {
   width: 64px;
+}
+#header .nav-item a:hover [class*="ic-"]::before {
+  background-position: -102px -107px;
 }
 #header .nav-area .nav-list .nav-item.ad {
   position: relative;
@@ -217,12 +226,27 @@
   margin-right: -12px;
 }
 #header .util-area [class*="btn-"] {
+  position: relative;
   width: 48px;
   padding: 8px;
+}
+#header .util-area [class*="btn-"]:hover::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--color_option_bg);
+  mix-blend-mode: multiply;
 }
 #header .util-area [class*="btn-"]::after {
   width: 32px;
   height: 32px;
+  z-index: 1;
 }
 #header .util-area .btn-menu::after {
   background-position: -326px -161px;
