@@ -37,7 +37,7 @@
 #header .nav-item [class*="ic-"]::after,
 #main .sc-news .ic-live::before,
 #main .sc-news .group-issue .btn-all::after,
-#main .control-area [class*="btn-"]::before,
+#main [class*="btn-"].round::before,
 #main .view-area [class*="btn-"]::before {
   content: "";
   display: block;
@@ -45,12 +45,19 @@
   background-size: 442px 434px;
   background-repeat: no-repeat;
 }
+
 .quick-menu-area .menu-item a [class*="ic-"]::before {
   content: "";
   display: block;
   background-image: url(../images/sp_main_02.png);
   background-repeat: no-repeat;
   background-size: 158px 137px;
+}
+
+.sc-recipe .recommend-item.ad .ad-mark {
+  background-image: url(../images/sp_main_03.png);
+  background-repeat: no-repeat;
+  background-size: 100px 90px;
 }
 
 /* 공통 프레임 1 */
@@ -80,6 +87,9 @@ a:hover .common-frame-inner:has(> img) img {
 }
 
 /* 공통 탭 메뉴 */
+html[data-dark="true"] .group-header .tab-item a {
+  color: rgba(255, 255, 255, 0.55);
+}
 .group-header.tab-menu {
   padding: 18px 20px 17px;
 }
@@ -130,33 +140,9 @@ a:hover .common-frame-inner:has(> img) img {
   left: 50%;
   transform: translateX(-50%);
 }
-.control-area [class*="btn-"] {
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--color_button_border);
-  background-color: var(--color_button1_bg);
-  position: relative;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 50%;
-}
-.control-area [class*="btn-"]::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: -299px -422px;
-  width: 10px;
-  height: 12px;
-  margin: auto;
-}
-.control-area .btn-prev::before {
-  transform: rotate(180deg);
-}
 .control-area .page {
   display: flex;
   flex-direction: row;
-  min-width: 156px;
   padding: 0 16px;
   color: var(--color_caption2);
   font-size: 1.3rem;
@@ -174,8 +160,36 @@ a:hover .common-frame-inner:has(> img) img {
   color: rgba(96, 96, 96, 0.5);
 }
 
+/* 공통 round 버튼 */
+[class*="btn-"].round {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color_button_border);
+  background-color: var(--color_button1_bg);
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+}
+[class*="btn-"].round::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: -299px -422px;
+  width: 10px;
+  height: 12px;
+  margin: auto;
+}
+.btn-prev.round::before {
+  transform: rotate(180deg);
+}
+
 /* 링크 마우스 hover underline */
-#main a:not(.highlight):hover,
+#main .sc-news a:hover,
+#main .sc-shopping a:hover,
+.group-header.tab-menu .tab-item a:hover,
+.sc-recipe [class*="-item"] a:hover .post-title,
 #footer a:hover {
   text-decoration: underline;
 }
