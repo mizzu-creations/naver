@@ -612,15 +612,6 @@ body {
 .sc-recipe .recommend-item.ad .common-frame-inner {
   position: relative;
 }
-.sc-recipe .recommend-item.ad .common-frame-inner .ad-mark {
-  width: 42px;
-  height: 16px;
-  padding: 2px 4px;
-  background-position: 0px -20px;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-}
 .sc-recipe .recommend-item.ad .recommend-wrap {
   font-size: 15px;
 }
@@ -761,4 +752,55 @@ body {
 /* 메인 우측 영역 */
 #main > .col-right {
   width: 420px;
+}
+
+/* 메인 우측 로그인 영역 */
+#main > .col-right > .sc-login {
+  padding: 21px 20px 18px;
+  line-height: 20px;
+  text-align: center;
+}
+.sc-login .login-msg {
+  font-size: 1.4rem;
+}
+.sc-login .link-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 13px;
+  padding: 17px 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  background-color: #03c75a;
+  box-shadow: 0 2px 4px 0 rgba(3, 199, 90, 0.12);
+  color: #fff;
+}
+.sc-login .link-login::before {
+  width: 72px;
+  height: 14px;
+  background-position: -142px -270px;
+}
+.sc-login .more-area {
+  display: flex;
+  justify-content: center;
+  color: var(--color_caption2);
+  margin-top: 16px;
+  font-size: 1.3rem;
+}
+.sc-login .more-area a + a {
+  display: flex;
+  align-items: center;
+}
+.sc-login .more-area a + a::before {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #ccc;
+  margin: 0 8px;
+}
+
+/* 메인 우측 광고 배너 영역 */
+#main > .col-right > .ad-banner a {
+  position: relative;
 }

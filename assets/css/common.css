@@ -38,7 +38,8 @@
 #main .sc-news .ic-live::before,
 #main .sc-news .group-issue .btn-all::after,
 #main [class*="btn-"].round::before,
-#main .view-area [class*="btn-"]::before {
+#main .view-area [class*="btn-"]::before,
+#main .sc-login .link-login::before {
   content: "";
   display: block;
   background-image: url("../images/sp_main_01.png");
@@ -54,7 +55,8 @@
   background-size: 158px 137px;
 }
 
-.sc-recipe .recommend-item.ad .ad-mark {
+.sc-recipe .recommend-item.ad .ad-mark,
+#main > .col-right > .ad-banner .ad-mark {
   background-image: url(../images/sp_main_03.png);
   background-repeat: no-repeat;
   background-size: 100px 90px;
@@ -66,6 +68,7 @@
   background-color: var(--color_block_bg);
   border-radius: 8px;
   box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
 .common-frame + .common-frame {
   margin-top: 16px;
@@ -192,4 +195,15 @@ html[data-dark="true"] .group-header .tab-item a {
 .sc-recipe [class*="-item"] a:hover .post-title,
 #footer a:hover {
   text-decoration: underline;
+}
+
+/* 광고 마크 */
+.ad-mark {
+  width: 42px;
+  height: 16px;
+  margin: 2px 4px;
+  background-position: 0px -20px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
