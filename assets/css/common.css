@@ -40,6 +40,14 @@
 #main [class*="btn-"].round::before,
 #main .view-area [class*="btn-"]::before,
 #main .sc-login .link-login::before,
+#main .sc-widjet .papago-title .ic-papago,
+#main .sc-widjet .papago-wrap::before,
+#main .dictionary-area .search-keyword::after,
+#main .sc-widjet .title-wrap .ic-vibe,
+#main .btn-refresh .ic-refresh,
+#main .vibe-area .ic-play::before,
+#main .sc-widjet .link-mobile::after,
+#main .link-mobile > span::before,
 .floating-group a::before,
 #footer .sc-notice > a::after {
   content: "";
@@ -70,24 +78,42 @@
   background-color: var(--color_block_bg);
   border-radius: 8px;
   box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  overflow: hidden;
 }
 .common-frame + .common-frame {
   margin-top: 16px;
 }
+aside.common-frame a,
+aside.common-frame a img {
+  border-radius: 8px;
+  overflow: hidden;
+}
 
 /* 공통 프레임 2 */
 .common-frame-inner {
-  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   background: rgba(245, 248, 251, 0.6);
+}
+.common-frame-img {
+  position: relative;
+  border-radius: 4px;
   overflow: hidden;
 }
-a .common-frame-inner:has(> img) img {
+.common-frame-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+a .common-frame-img:has(> img) img {
   will-change: transform;
   transition: transform 0.2s ease-in-out;
 }
-a:hover .common-frame-inner:has(> img) img {
+a:hover .common-frame-img:has(> img) img {
   transform: scale(1.05);
 }
 
@@ -205,6 +231,8 @@ html[data-dark="true"] .group-header .tab-item a {
 .ad-slide a:hover strong,
 .ad-slide a:hover p,
 .sc-login .more-area a:hover,
+.sc-widjet .dictionary-title:hover,
+.sc-widjet .music-item a:hover,
 #footer .banner-item a:hover .title,
 #footer .sc-notice a:hover,
 #footer .partner-wrap ul li a:hover,

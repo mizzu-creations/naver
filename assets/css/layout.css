@@ -356,8 +356,11 @@
   gap: 18px;
   width: 410px;
 }
-.footer-inner .sc-banner .common-frame-inner {
+.footer-inner .sc-banner .common-frame-img {
   position: relative;
+  border-radius: 6px;
+}
+.footer-inner .sc-banner .common-frame-img::after {
   border-radius: 6px;
 }
 .footer-inner .sc-banner .ic-ad {
