@@ -40,6 +40,7 @@
 #main [class*="btn-"].round::before,
 #main .view-area [class*="btn-"]::before,
 #main .sc-login .link-login::before,
+#main .weather-title .title > a:last-child:before,
 #main .sc-widjet .papago-title .ic-papago,
 #main .sc-widjet .papago-wrap::before,
 #main .dictionary-area .search-keyword::after,
