@@ -879,11 +879,11 @@ h2[class*="-title"] {
   display: flex;
   gap: 7px;
 }
-.sc-weather .weather-title .title > a:first-child:hover {
+.sc-weather .weather-title .title .weather:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.sc-weather .weather-title .title > a:last-child {
+.sc-weather .weather-title .title .comparison {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -898,10 +898,17 @@ h2[class*="-title"] {
   line-height: 25px;
   font-weight: 500;
 }
-.sc-weather .weather-title .title > a:last-child::before {
+.sc-weather .weather-title .title .comparison::before {
   background-position: -208.2px -422px;
   width: 12px;
   height: 12px;
+}
+.sc-weather .title .comparison:hover {
+  background-color: #f8f8f8;
+  color: #404040;
+}
+.sc-weather .title .comparison:hover::before {
+  background-position: -195.2px -422px;
 }
 .sc-weather .weather-title .local {
   color: var(--color_caption2);
@@ -911,6 +918,85 @@ h2[class*="-title"] {
 .sc-weather .weather-wrap {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
+  padding: 8px 0 2px;
+}
+.sc-weather .weather-wrap .current-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+.sc-weather .current-weather .current-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.sc-weather .current-box.top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.sc-weather .current-box.top .ic-weather {
+  background-position: -174px -87px;
+}
+.sc-weather .current-box.top .main-info {
+  display: flex;
+  flex-direction: column;
+}
+.sc-weather .current-box.top .main-info em {
+  font-size: 3.9rem;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+.sc-weather .current-box.top .main-info span {
+  padding-left: 5px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+}
+.sc-weather .current-box.bottom {
+  display: flex;
+  color: #3172e7;
+}
+.sc-weather .current-box.bottom span:last-child {
+  display: flex;
+  align-items: center;
+  color: #cd3534;
+}
+.sc-weather .current-box.bottom span:last-child::before {
+  content: "";
+  width: 1px;
+  height: 11px;
+  background-color: var(--color_dot_divider);
+  margin: 2px 5px 0 3px;
+  transform: skewX(-15deg);
+}
+.sc-weather .current-weather .dust-box {
+  display: flex;
+  gap: 6px;
+  font-size: 1.3rem;
+  line-height: 20px;
+}
+.sc-weather .current-weather .dust.mise {
+  display: flex;
+  align-items: center;
+}
+.sc-weather .current-weather .dust.chomise::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  margin-right: 6px;
+  background-color: var(--color_dot_divider);
+  border-radius: 50%;
+}
+.sc-weather .current-weather .dust-box em {
+  padding-left: 4px;
+  color: #32a1ff;
 }
 .sc-weather .weather-wrap img {
   width: 180px;

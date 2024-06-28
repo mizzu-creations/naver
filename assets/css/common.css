@@ -73,6 +73,15 @@
   background-size: 100px 90px;
 }
 
+.sc-weather .current-box:first-child .ic-weather {
+  display: block;
+  background-image: url(../images/sp_main_04.png);
+  background-size: 641px 587px;
+  background-repeat: no-repeat;
+  width: 86px;
+  height: 86px;
+}
+
 /* 공통 프레임 1 */
 .common-frame {
   background-color: #fff;
