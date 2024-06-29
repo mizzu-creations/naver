@@ -1005,7 +1005,7 @@ h2[class*="-title"] {
 
 /* 메인 우측 광고 증시 배너 영역 */
 #main > .col-right > .sc-stock {
-  padding: 0 18px 15px 18px;
+  padding: 0 18px 19px 18px;
 }
 .sc-stock .stock-title {
   display: flex;
@@ -1016,14 +1016,137 @@ h2[class*="-title"] {
 }
 .sc-stock .stock-title .title {
   display: flex;
+  align-items: center;
+  gap: 2px;
 }
 .sc-stock .stock-title .title > a:first-child:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.sc-stock > div {
+.sc-stock .stock-title .title .ic-info {
+  margin: 4px;
+  background-position: -169.2px -401px;
+  width: 14px;
+  height: 14px;
+}
+.sc-stock .stock-title .current {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  color: var(--color_caption2);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.sc-stock .stock-title .current .ic-refresh {
+  margin: 4px;
+  background-position: -325px -307px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.sc-stock .stock-title .current .ic-refresh:hover {
+  background-position: -308px -307px;
+}
+.sc-stock .stock-wrap {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
+  padding: 4px 0 2px;
+}
+.sc-stock .stock-wrap .usd-box .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+.sc-stock .usd-box .info .title {
+  font-size: 15px;
+  line-height: 18px;
+}
+.sc-stock .usd-box .info em {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.7px;
+}
+.sc-stock .usd-box .info .point {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2196f3;
+  font-size: 14px;
+  line-height: 17px;
+}
+.sc-stock .usd-box .point span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.sc-stock .usd-box .ic-down {
+  background-position: -143px -422.4px;
+  width: 12px;
+  height: 12px;
+}
+.sc-stock .stock-wrap .usd-box > span {
+  display: block;
+  color: var(--color_caption2);
+  margin-top: 11px;
+  font-size: 1.3rem;
+  line-height: 17px;
+}
+.sc-stock .stock-wrap > div {
+  flex: 1;
+}
+.sc-stock .stock-wrap .popular-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.sc-stock .stock-wrap .popular-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 1px solid var(--color_border_in);
+}
+.sc-stock .stock-wrap .popular-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.sc-stock .popular-item:last-child {
+  color: var(--color_caption2);
+}
+.sc-stock .popular-item:last-child a::after {
+  background-position: -332px -422px;
+  width: 10px;
+  height: 12px;
+}
+.sc-stock .stock-wrap .popular-item a span {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.sc-stock .stock-wrap .popular-item em {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #f44336;
+}
+.sc-stock .stock-wrap .popular-item em.up::before {
+  background-position: -170px -422px;
+  width: 12px;
+  height: 12px;
+}
+.sc-stock .stock-wrap .popular-item em.down {
+  color: #2196f3;
+}
+.sc-stock .stock-wrap .popular-item em.down::before {
+  background-position: -144px -422px;
+
+  width: 12px;
+  height: 12px;
 }
 
 /* 메인 우측 광고 배너 영역 */
